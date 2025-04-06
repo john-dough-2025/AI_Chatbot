@@ -31,8 +31,8 @@ if "messages" not in st.session_state:
 
 with st.sidebar:
     with st.expander(":pencil: **Email credentials** 🤫"):
-        email_login = st.text_input("Login:",value="john_dough.kus@outlook.com")
-        email_password = st.text_input("Password:",value="Streamlit#2025", type="password")
+        email_login = st.text_input("Login:",value="")
+        email_password = st.text_input("Password:",value="", type="password")
     
     with st.container(border=True):
         st.title("GPT personality")
