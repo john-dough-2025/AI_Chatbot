@@ -2,7 +2,7 @@ import streamlit as st
 from openai import OpenAI
 from utils import *
 
-st.title("ChatGPT-like clone")
+st.title("AI Assistant")
 use_chatgpt = st.checkbox("**Use ChatGPT** (consumes tokens)")
 
 ####################################################
