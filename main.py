@@ -3,7 +3,18 @@ from openai import OpenAI
 from utils import *
 
 st.title("AI Assistant")
-use_chatgpt = st.checkbox("**Use ChatGPT** (consumes tokens)")
+
+password = st.text_input("Enter password to use ChatGPT", type="password")
+
+checkbox_visible = False
+if password != "keyrus":
+    checkbox_visible = True
+
+want_use_chatgpt = st.checkbox("**Use ChatGPT** (consumes tokens)", value=False, disabled=checkbox_visible)
+
+use_chatgpt = False
+if password == "keyrus":
+    use_chatgpt = want_use_chatgpt
 
 ####################################################
 ####################### INIT #######################
