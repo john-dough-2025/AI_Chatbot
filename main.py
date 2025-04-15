@@ -7,7 +7,7 @@ st.title("AI Assistant")
 password = st.text_input("Enter password to use ChatGPT", type="password")
 
 checkbox_visible = False
-if password != "keyrus":
+if password != st.secrets["APP_PW"]:
     checkbox_visible = True
 
 want_use_chatgpt = st.checkbox("**Use ChatGPT** (consumes tokens)", value=False, disabled=checkbox_visible)
